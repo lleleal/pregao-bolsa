@@ -1,28 +1,24 @@
-public class Ativo extends Acao {
+public class Ativo {
 
-    private int cotas;
-    private Corretora corretora;
+    private String nome;
+    private String codigo;
+    private double valor;
 
-    public Ativo(String nome, double preco, int cotas, Corretora corretora) {
-        super(nome, preco);
-        this.cotas = cotas;
-        this.corretora = corretora;
+    public Ativo(String nome, String codigo, double valor) {
+        this.nome = nome;
+        this.codigo = codigo;
+        this.valor = valor;
     }
 
-    @Override
-    public double calcularValor() {
-        return getPreco() * cotas;
+    public String getNome() {
+        return nome;
     }
 
-    public Corretora getCorretora() {
-        return corretora;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public void setCotas(int cotas) {
-        this.cotas = cotas;
-    }
-
-    public void setLocal(Corretora corretora) {
-        this.corretora = corretora;
+    public double getValor() {
+        return valor;
     }
 }
